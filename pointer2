@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int num=5;
+	int a=num;
+	cout<<"a before "<<num<<endl;
+	a++;
+	cout<<"a after "<<num<<endl;
+	
+	int *p=&num;
+	cout<<"before"<<num<<endl;
+	(*p)++;
+	cout<<"after"<<num<<endl;
+	
+	//copy to pointer
+	int *q=p;
+	cout<<p<<"-"<<q<<endl;
+	cout<<*p<<" - "<<*q<<endl;
+	
+	//important concept
+	
+	int i=3;
+	int *t=&i;
+	cout<<(*t)++<<endl;
+	//pointer to int is created and pointing to some garvage address
+//	int *p=0;
+//	cout<<*p<<endl;
+	
+//	int i=5;
+	//int *p=&i;
+	
+//	int *p=0;
+//	p=&i;
+//	int num=5;
+//	cout<<num<<endl;
+	//address of operator
+	
+//	cout<<"address of num is "<<&num<<endl;
+//	int *ptr=&num;
+//	
+//	cout<<"Address is :"<<ptr<<endl;
+//	cout<<"Value is : "<<*ptr<<endl;
+//	
+//	double d=4.3;
+//	double *p2=&d;
+//	
+//	cout<<"Address is : "<<p2<<endl;//0x16f
+//	cout<<"value is : "<<*p2<<endl;//4.3
+//	
+//	cout<<"size of integer is"<<sizeof(num)<<endl;
+//	cout<<"size of pointer is "<<sizeof(ptr)<<endl;
+//	cout<<"size of pointer is "<<sizeof(p2)<<endl;
+//	int arr[5]={1,2,3,4,5};
+//	char ch[6]="abcde";
+//	
+//	cout<<arr<<endl;
+//	//attention here
+//	cout<<ch<<endl;
+//	
+//	char *c=&ch[0];
+//	cout<<c<<endl;
+	
+	return 0;
+}
