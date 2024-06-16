@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int row,col;
+	row=3;
+	//creating array-dyanamically array of pointer
+	int** arr=new int*[row];
+	int sizes[]={4,2,3};
+	
+	//no column for each row as input from user
+	for(int i=0;i<row;i++){
+		*(arr+i)=new int[sizes[i]];
+	}
+	
+	//input from user
+	int num=1;
+	for(int i=0;i<row;i++){
+		for(int j=0;j<sizes[i];j++){
+			//cin>>arr[i] //if user want ainput
+			arr[i][j]=num++;
+		}
+	}
+	cout<<"elements in matrix form as follow"<<endl;
+	for(int i=0;i<row;i++){
+		for(int j=0;j<sizes[i];j++){
+			cout<<arr[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+//creating for 1d array
+int main(){
+	int row1[]={1,2,3,4};
+	int row2[]={5,6};
+	int row3[]={7,8,9};
+	
+	//storing base address of each row array
+	int* jagged[]={row1,row2,row3};
+	int sizes[]={4,2,3};
+	cout<<"elements in matrix form as follow"<<endl;
+	for(int i=0;i<3;i++){
+		//getting current (ith row)
+		int* ptr=jagged[i];
+		for(int j=0;j<sizes[i];j++){
+			cout<<*(ptr + j)<<" ";
+			//ptr have abase address
+			//adding j means access jth
+			//elemnts  for particular(ith) row
+		}
+		cout<<endl;
+	}
+	return 0;
+}
