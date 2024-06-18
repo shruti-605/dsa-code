@@ -1,0 +1,24 @@
+//fibanocci series through recursion
+class Solution {
+public:
+    int fib(int n) {
+        //base case
+        if(n==0)
+           return 0;
+        if(n==1)
+        return 1;
+        int ans=fib(n-1)+fib(n-2);
+        return ans;
+    }
+};
+//stairs prblm
+#include <bits/stdc++.h> 
+int countDistinctWays(int nStairs) {
+    if(nStarirs<0)
+      return 0;
+    if(nStairs==1)
+       return 1;
+    //Rc
+    int count=countDistinctWays(nStairs-1)+countDistinctWays(nStairs-2);
+    return ans;
+}
