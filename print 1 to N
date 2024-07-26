@@ -1,0 +1,24 @@
+//print 1 to N
+class Solution{
+public:
+    void printNos(int N) {
+        if (N <= 0) {
+            return;
+        }
+        printNos(N - 1);
+        cout << N << " ";
+    }
+};
+//sum of digit
+class Solution{
+  public:
+    // Complete this function
+    int sumOfDigits(int n)
+    {
+        if(n<10)
+    return n;
+ else
+    return sumOfDigits(n/10)+n%10;
+        //Your code here
+    }
+};
